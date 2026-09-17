@@ -1,3 +1,12 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Turon Telecom — Cheksiz internet</title>
+<meta name="description" content="Turon Telecom — tez internet. Routerlar naqd yoki bo'lib to'lash.">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
 *{margin:0;padding:0;box-sizing:border-box}
 :root{--bg:#08090f;--card:#10131e;--card2:#141828;--line:rgba(255,255,255,.06);--line2:rgba(255,255,255,.1);--acc:#3b9eff;--accS:rgba(59,158,255,.12);--accG:rgba(59,158,255,.25);--txt:#f5f7fb;--soft:#b8bfd0;--mut:#6b7288;--grn:#34d399;--gld:#f5b544;--red:#f87171}
 html{scroll-behavior:smooth}
@@ -98,138 +107,7 @@ footer .copy{color:var(--mut);font-size:.78rem}
 .to-top{position:fixed;bottom:24px;right:24px;width:48px;height:48px;border-radius:50%;background:var(--acc);color:#fff;border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:1.2rem;box-shadow:0 6px 24px var(--accG);opacity:0;pointer-events:none;transition:.3s;z-index:50}
 .to-top.on{opacity:1;pointer-events:auto}
 .to-top:hover{transform:translateY(-3px)}
-const TG_TOKEN='8892520457:AAHx8cszd0cEezw4ZGRZl19ruyvgcGr2AW4';
-const TG_CHAT='1166660946';
-
-const ROUTERS=[
-  {name:'ONU',cash:'125 000',p3:'45 833',p6:'23 958',p12:'13 542'},
-  {name:'TP-Link XC220-G5',cash:'278 489',p3:'102 112',p6:'53 377',p12:'30 170'},
-  {name:'TP-Link Archer C6',cash:'289 582',p3:'106 180',p6:'55 503',p12:'31 371'},
-  {name:'TP-Link Archer C24',cash:'298 013',p3:'109 272',p6:'57 119',p12:'32 285'},
-  {name:'TP-Link Archer C64',cash:'352 560',p3:'129 272',p6:'67 574',p12:'38 194'},
-  {name:'TP-Link XC220-G3',cash:'379 759',p3:'139 245',p6:'72 787',p12:'41 141'},
-  {name:'TP-Link Archer AX53',cash:'463 330',p3:'169 888',p6:'88 805',p12:'50 194'},
-  {name:'Deco X10 AX1500',cash:'752 913',p3:'276 068',p6:'144 308',p12:'81 566'},
-  {name:'Deco X20 AX1800',cash:'992 852',p3:'364 046',p6:'190 297',p12:'107 559'}
-];
-
-document.querySelectorAll('[data-tariff]').forEach(b=>{
-  b.addEventListener('click',()=>{
-    const v=b.getAttribute('data-tariff');
-    const s=document.getElementById('tariffSelect');
-    if(s){Array.from(s.options).forEach(o=>{if(o.value===v)s.value=v;});}
-  });
-});
-
-const tSel=document.getElementById('tariffSelect');
-const rSel=document.getElementById('routerSelect');
-const rHint=document.getElementById('routerHint');
-
-function buildRouters(){
-  if(!tSel||!rSel)return;
-  const opt=tSel.options[tSel.selectedIndex];
-  if(!opt||!opt.value){rSel.innerHTML='<option value="">— Avval tarifni tanlang —</option>';if(rHint)rHint.textContent='';return;}
-  const canFree=opt.dataset.router==='free';
-  let html='<option value="">— Router tanlang —</option>';
-  html+='<option value="Mening routerim bor (bepul)">📦 Mening routerim bor — bepul</option>';
-  if(canFree)html+='<option value="Bepul router (tarif bilan)">🎁 Bepul router — tarif bilan</option>';
-  html+='<option value="__d1__" disabled>───────────</option>';
-  ROUTERS.forEach(r=>{
-    html+='<option value="Sotib olish: '+r.name+' (naqd '+r.cash+" so'm)\">💳 Sotib olish: "+r.name+' — '+r.cash+" so'm</option>";
-  });
-  html+='<option value="__d2__" disabled>───────────</option>';
-  ROUTERS.forEach(r=>{
-    html+='<option value="Bo\'lib to\'lash: '+r.name+' (3 oy '+r.p3+' | 6 oy '+r.p6+' | 12 oy '+r.p12+" so'm/oy)\">📅 Bo'lib to'lash: "+r.name+' — 12 oy: '+r.p12+" so'm/oy</option>";
-  });
-  rSel.innerHTML=html;
-  if(rHint){
-    if(canFree)rHint.innerHTML='💡 Bu tarifda <strong style="color:var(--grn)">bepul router</strong> mavjud';
-    else rHint.innerHTML='💡 Bu tarifda bepul router yo\'q — sotib olish yoki bo\'lib to\'lashni tanlang';
-  }
-}
-
-if(tSel){
-  tSel.addEventListener('change',buildRouters);
-}
-
-if(rSel){
-  rSel.addEventListener('change',()=>{
-    const v=rSel.value;
-    if(v==='Bepul router (tarif bilan)'){
-      const opt=tSel.options[tSel.selectedIndex];
-      if(opt.dataset.router!=='free'){
-        rSel.value='';
-        if(rHint){
-          rHint.innerHTML='⚠️ <span style="color:var(--red)">Bu tarifda bepul router mavjud emas!</span> Faqat Premier Plus.';
-          setTimeout(()=>{buildRouters();},2500);
-        }
-        return;
-      }
-    }
-  });
-}
-
-document.querySelectorAll('[data-rt]').forEach(b=>{
-  b.addEventListener('click',()=>{
-    const d=b.dataset;
-    if(!tSel.value){
-      if(rHint)rHint.innerHTML='⚠️ Avval tarifni tanlang';
-      document.getElementById('ariza').scrollIntoView({behavior:'smooth'});
-      return;
-    }
-    buildRouters();
-    const val='Sotib olish: '+d.rt+' (naqd '+Number(d.cash).toLocaleString('ru-RU')+" so'm)";
-    Array.from(rSel.options).forEach(o=>{if(o.value===val)rSel.value=val;});
-    document.getElementById('ariza').scrollIntoView({behavior:'smooth'});
-  });
-});
-
-const lf=document.getElementById('leadForm');
-if(lf){
-  lf.addEventListener('submit',async function(e){
-    e.preventDefault();
-    const btn=document.getElementById('submitBtn');
-    const st=document.getElementById('formStatus');
-    const f=this;
-    const d={
-      name:f.name.value.trim(),phone:f.phone.value.trim(),
-      phone2:f.phone2.value.trim()||'—',district:f.district.value.trim(),
-      street:f.street.value.trim(),house:f.house.value.trim(),
-      flat:f.flat.value.trim(),tariff:f.tariff.value||'—',
-      router:f.router.value||'—'
-    };
-    if(!d.name||!d.phone||!d.district||!d.street||!d.house||!d.flat||!d.tariff||!d.router){
-      st.className='fstat err';st.textContent='Barcha majburiy maydonlarni to\'ldiring';return;
-    }
-    const text='🔔 YANGI ARIZA!\n━━━━━━━━━━━━━━━━━━\n👤 Ism: '+d.name+'\n📞 Tel: '+d.phone+'\n📱 Qo\'shimcha: '+d.phone2+'\n━━━━━━━━━━━━━━━━━━\n📍 Tuman: '+d.district+'\n🏠 Ko\'cha: '+d.street+'\n🚪 Uy: '+d.house+', Kv: '+d.flat+'\n━━━━━━━━━━━━━━━━━━\n📦 Tarif: '+d.tariff+'\n📶 Router: '+d.router;
-    btn.disabled=true;btn.textContent='Yuborilmoqda...';st.className='fstat';st.textContent='';
-    try{
-      const r=await fetch('https://api.telegram.org/bot'+TG_TOKEN+'/sendMessage',{
-        method:'POST',headers:{'Content-Type':'application/json'},
-        body:JSON.stringify({chat_id:TG_CHAT,text:text})
-      });
-      const j=await r.json();
-      if(j.ok){st.className='fstat ok';st.textContent='✓ Rahmat! Arizangiz qabul qilindi.';f.reset();if(rSel)buildRouters();}
-      else throw new Error(j.description);
-    }catch(err){st.className='fstat err';st.textContent='✗ Xatolik. Telegram orqali bog\'laning.';}
-    finally{btn.disabled=false;btn.textContent='Yuborish';}
-  });
-}
-
-const toTop=document.getElementById('toTop');
-if(toTop){
-  window.addEventListener('scroll',()=>{toTop.classList.toggle('on',window.scrollY>400);});
-  toTop.addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));
-}
-<!DOCTYPE html>
-<html lang="uz">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Turon Telecom — Cheksiz internet</title>
-<meta name="description" content="Turon Telecom — tez internet. Routerlar naqd yoki bo'lib to'lash.">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+</style>
 </head>
 <body>
 
@@ -239,7 +117,6 @@ if(toTop){
     <div class="nav-l">
       <a href="#premier">Premier</a>
       <a href="#ultima">Ultima</a>
-      <a href="#routers">Routerlar</a>
       <a href="#ariza">Ariza</a>
       <a href="https://t.me/baxtiyorv_b" target="_blank" class="nav-cta">Telegram</a>
     </div>
@@ -250,10 +127,10 @@ if(toTop){
   <div class="hero-in">
     <div class="pill fade"><span class="dot"></span> Yangi tariflar mavjud</div>
     <h1 class="fade">Katta ma'lumotlar uchun<br><em>cheksiz internet</em></h1>
-    <p class="fade">Turon Telecom — tez, barqaror va cheksiz internet. Routerlar ham mavjud.</p>
+    <p class="fade">Turon Telecom — tez, barqaror va cheksiz internet.</p>
     <div class="hero-cta fade">
       <a href="#ariza" class="btn">Ariza qoldirish</a>
-      <a href="#routers" class="btn btn-ghost">Routerlarni ko'rish</a>
+      <a href="#premier" class="btn btn-ghost">Tariflarni ko'rish</a>
     </div>
   </div>
 </section>
@@ -392,6 +269,124 @@ if(toTop){
 
 <button class="to-top" id="toTop" aria-label="Yuqoriga">↑</button>
 
-<script src="script.js"></script>
+<script>
+  const TG_TOKEN='8892520457:AAHx8cszd0cEezw4ZGRZl19ruyvgcGr2AW4';
+const TG_CHAT='1166660946';
+
+const ROUTERS=[
+  {name:'ONU',cash:'125 000',p3:'45 833',p6:'23 958',p12:'13 542'},
+  {name:'TP-Link XC220-G5',cash:'278 489',p3:'102 112',p6:'53 377',p12:'30 170'},
+  {name:'TP-Link Archer C6',cash:'289 582',p3:'106 180',p6:'55 503',p12:'31 371'},
+  {name:'TP-Link Archer C24',cash:'298 013',p3:'109 272',p6:'57 119',p12:'32 285'},
+  {name:'TP-Link Archer C64',cash:'352 560',p3:'129 272',p6:'67 574',p12:'38 194'},
+  {name:'TP-Link XC220-G3',cash:'379 759',p3:'139 245',p6:'72 787',p12:'41 141'},
+  {name:'TP-Link Archer AX53',cash:'463 330',p3:'169 888',p6:'88 805',p12:'50 194'},
+  {name:'Deco X10 AX1500',cash:'752 913',p3:'276 068',p6:'144 308',p12:'81 566'},
+  {name:'Deco X20 AX1800',cash:'992 852',p3:'364 046',p6:'190 297',p12:'107 559'}
+];
+
+const tSel=document.getElementById('tariffSelect');
+const rSel=document.getElementById('routerSelect');
+const rHint=document.getElementById('routerHint');
+
+document.querySelectorAll('[data-tariff]').forEach(function(b){
+  b.addEventListener('click',function(){
+    const v=b.getAttribute('data-tariff');
+    if(tSel){
+      for(let i=0;i<tSel.options.length;i++){
+        if(tSel.options[i].value===v){tSel.value=v;break;}
+      }
+      buildRouters();
+    }
+  });
+});
+
+function buildRouters(){
+  if(!tSel||!rSel)return;
+  const opt=tSel.options[tSel.selectedIndex];
+  if(!opt||!opt.value){
+    rSel.innerHTML='<option value="">— Avval tarifni tanlang —</option>';
+    if(rHint)rHint.textContent='';
+    return;
+  }
+  const canFree=opt.dataset.router==='free';
+  let html='<option value="">— Router tanlang —</option>';
+  html+='<option value="Mening routerim bor (bepul)">📦 Mening routerim bor — bepul</option>';
+  if(canFree){html+='<option value="Bepul router (tarif bilan)">🎁 Bepul router — tarif bilan</option>';}
+  html+='<option value="__divider__" disabled>━━━ Sotib olish ━━━</option>';
+  ROUTERS.forEach(function(r){
+    html+='<option value="Sotib olish: '+r.name+' (naqd '+r.cash+" so'm)\">💳 "+r.name+' — '+r.cash+" so'm</option>";
+  });
+  html+='<option value="__divider2__" disabled>━━━ Bo\'lib to\'lash ━━━</option>';
+  ROUTERS.forEach(function(r){
+    html+='<option value="Bolib tolash: '+r.name+' (12 oy: '+r.p12+" so'm/oy)\">📅 "+r.name+' — 12 oy: '+r.p12+" so'm/oy</option>";
+  });
+  rSel.innerHTML=html;
+  if(rHint){
+    if(canFree){rHint.innerHTML='💡 Bu tarifda <strong style="color:var(--grn)">bepul router</strong> mavjud';rHint.style.color='';}
+    else{rHint.innerHTML='💡 Bu tarifda bepul router yo\'q — sotib olish yoki bo\'lib to\'lashni tanlang';rHint.style.color='';}
+  }
+}
+
+if(tSel){tSel.addEventListener('change',buildRouters);}
+
+if(rSel){
+  rSel.addEventListener('change',function(){
+    const v=rSel.value;
+    if(v==='Bepul router (tarif bilan)'){
+      const opt=tSel.options[tSel.selectedIndex];
+      if(opt.dataset.router!=='free'){
+        rSel.value='';
+        if(rHint){
+          rHint.innerHTML='⚠️ Bu tarifda bepul router mavjud emas! Faqat Premier Plus tarifida.';
+          rHint.style.color='var(--red)';
+          setTimeout(function(){rHint.style.color='';buildRouters();},3000);
+        }
+      }
+    }
+  });
+}
+
+const lf=document.getElementById('leadForm');
+if(lf){
+  lf.addEventListener('submit',async function(e){
+    e.preventDefault();
+    const btn=document.getElementById('submitBtn');
+    const st=document.getElementById('formStatus');
+    const f=this;
+    const d={
+      name:f.name.value.trim(),phone:f.phone.value.trim(),
+      phone2:f.phone2.value.trim()||'—',district:f.district.value.trim(),
+      street:f.street.value.trim(),house:f.house.value.trim(),
+      flat:f.flat.value.trim(),tariff:f.tariff.value||'—',
+      router:f.router.value||'—'
+    };
+    if(!d.name||!d.phone||!d.district||!d.street||!d.house||!d.flat||!d.tariff||!d.router){
+      st.className='fstat err';st.textContent='Barcha majburiy maydonlarni to\'ldiring';return;
+    }
+    const text='🔔 YANGI ARIZA!\n━━━━━━━━━━━━━━━━━━\n👤 Ism: '+d.name+'\n📞 Tel: '+d.phone+'\n📱 Qo\'shimcha: '+d.phone2+'\n━━━━━━━━━━━━━━━━━━\n📍 Tuman: '+d.district+'\n🏠 Ko\'cha: '+d.street+'\n🚪 Uy: '+d.house+', Kv: '+d.flat+'\n━━━━━━━━━━━━━━━━━━\n📦 Tarif: '+d.tariff+'\n📶 Router: '+d.router;
+    btn.disabled=true;btn.textContent='Yuborilmoqda...';st.className='fstat';st.textContent='';
+    try{
+      const r=await fetch('https://api.telegram.org/bot'+TG_TOKEN+'/sendMessage',{
+        method:'POST',headers:{'Content-Type':'application/json'},
+        body:JSON.stringify({chat_id:TG_CHAT,text:text})
+      });
+      const j=await r.json();
+      if(j.ok){
+        st.className='fstat ok';st.textContent='✓ Rahmat! Arizangiz qabul qilindi.';
+        f.reset();if(rSel)buildRouters();
+      }else throw new Error(j.description);
+    }catch(err){
+      st.className='fstat err';st.textContent='✗ Xatolik. Telegram orqali bog\'laning.';
+    }finally{btn.disabled=false;btn.textContent='Yuborish';}
+  });
+}
+
+const toTop=document.getElementById('toTop');
+if(toTop){
+  window.addEventListener('scroll',function(){toTop.classList.toggle('on',window.scrollY>400);});
+  toTop.addEventListener('click',function(){window.scrollTo({top:0,behavior:'smooth'});});
+}
+</script>
 </body>
 </html>
