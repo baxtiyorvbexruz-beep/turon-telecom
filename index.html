@@ -89,9 +89,8 @@ nav{position:sticky;top:0;z-index:100;background:rgba(8,9,15,.75);backdrop-filte
 .rt-badge.bud{background:var(--grn);color:#0a1a12}
 .rt-badge.prem{background:var(--gld);color:#1a1a1a}
 .rt-img{width:100%;height:200px;background:linear-gradient(135deg,#0d1220,#0a0e1a);display:flex;align-items:center;justify-content:center;overflow:hidden;position:relative;border-bottom:1px solid var(--line)}
-.rt-img img{width:100%;height:100%;object-fit:contain;padding:20px;transition:.4s;position:relative;z-index:1}
-.rt-card:hover .rt-img img{transform:scale(1.06)}
-.rt-img .fb{font-size:3.5rem;color:var(--mut);position:absolute;opacity:.3;z-index:0}
+.rt-img svg{width:100%;height:100%;padding:24px;transition:.4s}
+.rt-card:hover .rt-img svg{transform:scale(1.08)}
 .rt-body{padding:22px 22px 0;flex-grow:1;display:flex;flex-direction:column}
 .rt-name{font-size:1.05rem;font-weight:800;text-align:center;margin-bottom:4px;letter-spacing:-.02em}
 .rt-cat{text-align:center;font-size:.7rem;color:var(--mut);text-transform:uppercase;letter-spacing:1.3px;font-weight:600;margin-bottom:18px}
@@ -119,9 +118,8 @@ nav{position:sticky;top:0;z-index:100;background:rgba(8,9,15,.75);backdrop-filte
 .mod-x{position:absolute;top:14px;right:14px;width:34px;height:34px;border-radius:50%;background:rgba(255,255,255,.05);border:none;color:var(--soft);font-size:1.1rem;cursor:pointer;transition:.2s;font-family:inherit}
 .mod-x:hover{background:rgba(255,255,255,.1);color:var(--txt)}
 .mod-h{text-align:center;margin-bottom:22px}
-.mod-h .mimg{width:120px;height:120px;margin:0 auto 16px;border-radius:16px;background:rgba(0,0,0,.3);display:flex;align-items:center;justify-content:center;overflow:hidden;border:1px solid var(--line);position:relative}
-.mod-h .mimg img{width:100%;height:100%;object-fit:contain;padding:12px;position:relative;z-index:1}
-.mod-h .mimg .fb{font-size:2.5rem;color:var(--mut);position:absolute;opacity:.3}
+.mod-h .mimg{width:120px;height:120px;margin:0 auto 16px;border-radius:16px;background:rgba(0,0,0,.3);display:flex;align-items:center;justify-content:center;overflow:hidden;border:1px solid var(--line)}
+.mod-h .mimg svg{width:100%;height:100%;padding:12px}
 .mod-h .mtag{font-size:.7rem;color:var(--acc);text-transform:uppercase;letter-spacing:1.8px;font-weight:700;margin-bottom:6px}
 .mod-h h3{font-size:1.35rem;font-weight:800;letter-spacing:-.02em;margin-bottom:6px}
 .mod-h p{font-size:.85rem;color:var(--mut)}
@@ -346,12 +344,10 @@ footer .copy{color:var(--mut);font-size:.78rem}
 
   <div class="rt-grid" id="rtGrid">
 
+    <!-- ONU -->
     <div class="rt-card" data-cat="budget">
       <div class="rt-badge bud">Byudjet</div>
-      <div class="rt-img">
-        <img src="https://www.tp-link.com/resources/images/onu/onu.png" alt="ONU" onerror="this.style.display='none'">
-        <span class="fb">📡</span>
-      </div>
+      <div class="rt-img"><svg viewBox="0 0 200 120" xmlns="http://www.w3.org/2000/svg"><rect x="50" y="55" width="100" height="40" rx="6" fill="#1e2a45" stroke="#3b9eff" stroke-width="1.5"/><rect x="60" y="65" width="80" height="8" rx="2" fill="#3b9eff" opacity="0.3"/><circle cx="70" cy="82" r="3" fill="#34d399"/><circle cx="82" cy="82" r="3" fill="#3b9eff"/><circle cx="94" cy="82" r="3" fill="#3b9eff" opacity="0.4"/><circle cx="106" cy="82" r="3" fill="#6b7288"/><rect x="140" y="68" width="6" height="14" rx="1" fill="#3b9eff"/><rect x="148" y="68" width="6" height="14" rx="1" fill="#3b9eff"/><text x="100" y="45" text-anchor="middle" fill="#6b7288" font-size="9" font-family="Inter">OPTIK</text></svg></div>
       <div class="rt-body">
         <div class="rt-name">ONU</div>
         <div class="rt-cat">Optik terminal</div>
@@ -368,14 +364,12 @@ footer .copy{color:var(--mut);font-size:.78rem}
           </div>
         </div>
       </div>
-      <button class="btn" data-rt="ONU" data-img="https://www.tp-link.com/resources/images/onu/onu.png" data-cash="125000" data-p3="45833" data-p6="23958" data-p12="13542">Buyurtma berish</button>
+      <button class="btn" data-rt="ONU" data-cash="125000" data-p3="45833" data-p6="23958" data-p12="13542">Buyurtma berish</button>
     </div>
 
+    <!-- XC220-G5 -->
     <div class="rt-card" data-cat="middle">
-      <div class="rt-img">
-        <img src="https://static.tp-link.com/upload/product-overview/2022/202203/20220323/XC220-G5%281%29.jpg" alt="XC220-G5" onerror="this.style.display='none'">
-        <span class="fb">📶</span>
-      </div>
+      <div class="rt-img"><svg viewBox="0 0 200 120" xmlns="http://www.w3.org/2000/svg"><line x1="70" y1="30" x2="60" y2="70" stroke="#3b9eff" stroke-width="2" stroke-linecap="round"/><line x1="130" y1="30" x2="140" y2="70" stroke="#3b9eff" stroke-width="2" stroke-linecap="round"/><rect x="50" y="65" width="100" height="40" rx="8" fill="#1e2a45" stroke="#3b9eff" stroke-width="1.5"/><rect x="60" y="75" width="80" height="6" rx="2" fill="#3b9eff" opacity="0.3"/><circle cx="70" cy="92" r="3" fill="#34d399"/><circle cx="82" cy="92" r="3" fill="#3b9eff"/><circle cx="94" cy="92" r="3" fill="#6b7288"/><circle cx="106" cy="92" r="3" fill="#6b7288"/></svg></div>
       <div class="rt-body">
         <div class="rt-name">TP-Link XC220-G5</div>
         <div class="rt-cat">Wi-Fi 5 · AC1200</div>
@@ -393,15 +387,13 @@ footer .copy{color:var(--mut);font-size:.78rem}
           </div>
         </div>
       </div>
-      <button class="btn" data-rt="TP-Link XC220-G5" data-img="https://static.tp-link.com/upload/product-overview/2022/202203/20220323/XC220-G5%281%29.jpg" data-cash="278489" data-p3="102112" data-p6="53377" data-p12="30170">Buyurtma berish</button>
+      <button class="btn" data-rt="TP-Link XC220-G5" data-cash="278489" data-p3="102112" data-p6="53377" data-p12="30170">Buyurtma berish</button>
     </div>
 
+    <!-- Archer C6 (HOT) -->
     <div class="rt-card hot" data-cat="middle">
       <div class="rt-badge hot">Ommabop</div>
-      <div class="rt-img">
-        <img src="https://static.tp-link.com/upload/image-line/04_Archer_C6_02_normal_20210909073927h.jpg" alt="Archer C6" onerror="this.style.display='none'">
-        <span class="fb">📶</span>
-      </div>
+      <div class="rt-img"><svg viewBox="0 0 200 120" xmlns="http://www.w3.org/2000/svg"><line x1="60" y1="25" x2="55" y2="70" stroke="#3b9eff" stroke-width="2.5" stroke-linecap="round"/><line x1="85" y1="25" x2="82" y2="70" stroke="#3b9eff" stroke-width="2.5" stroke-linecap="round"/><line x1="115" y1="25" x2="118" y2="70" stroke="#3b9eff" stroke-width="2.5" stroke-linecap="round"/><line x1="140" y1="25" x2="145" y2="70" stroke="#3b9eff" stroke-width="2.5" stroke-linecap="round"/><rect x="45" y="65" width="110" height="42" rx="8" fill="#1e2a45" stroke="#3b9eff" stroke-width="1.5"/><rect x="55" y="75" width="90" height="6" rx="2" fill="#3b9eff" opacity="0.3"/><circle cx="65" cy="92" r="3" fill="#34d399"/><circle cx="78" cy="92" r="3" fill="#3b9eff"/><circle cx="91" cy="92" r="3" fill="#3b9eff"/><circle cx="104" cy="92" r="3" fill="#6b7288"/><circle cx="117" cy="92" r="3" fill="#6b7288"/></svg></div>
       <div class="rt-body">
         <div class="rt-name">TP-Link Archer C6</div>
         <div class="rt-cat">Wi-Fi 5 · AC1200</div>
@@ -419,14 +411,12 @@ footer .copy{color:var(--mut);font-size:.78rem}
           </div>
         </div>
       </div>
-      <button class="btn" data-rt="TP-Link Archer C6" data-img="https://static.tp-link.com/upload/image-line/04_Archer_C6_02_normal_20210909073927h.jpg" data-cash="289582" data-p3="106180" data-p6="55503" data-p12="31371">Buyurtma berish</button>
+      <button class="btn" data-rt="TP-Link Archer C6" data-cash="289582" data-p3="106180" data-p6="55503" data-p12="31371">Buyurtma berish</button>
     </div>
 
+    <!-- Archer C24 -->
     <div class="rt-card" data-cat="middle">
-      <div class="rt-img">
-        <img src="https://static.tp-link.com/upload/image-line/Archer_C24-01_large_20210909104432u.jpg" alt="Archer C24" onerror="this.style.display='none'">
-        <span class="fb">📶</span>
-      </div>
+      <div class="rt-img"><svg viewBox="0 0 200 120" xmlns="http://www.w3.org/2000/svg"><line x1="75" y1="30" x2="70" y2="70" stroke="#3b9eff" stroke-width="2.5" stroke-linecap="round"/><line x1="125" y1="30" x2="130" y2="70" stroke="#3b9eff" stroke-width="2.5" stroke-linecap="round"/><rect x="55" y="65" width="90" height="40" rx="8" fill="#1e2a45" stroke="#3b9eff" stroke-width="1.5"/><rect x="65" y="75" width="70" height="6" rx="2" fill="#3b9eff" opacity="0.3"/><circle cx="75" cy="92" r="3" fill="#34d399"/><circle cx="87" cy="92" r="3" fill="#3b9eff"/><circle cx="99" cy="92" r="3" fill="#6b7288"/><circle cx="111" cy="92" r="3" fill="#6b7288"/></svg></div>
       <div class="rt-body">
         <div class="rt-name">TP-Link Archer C24</div>
         <div class="rt-cat">Wi-Fi 4 · N300</div>
@@ -443,14 +433,12 @@ footer .copy{color:var(--mut);font-size:.78rem}
           </div>
         </div>
       </div>
-      <button class="btn" data-rt="TP-Link Archer C24" data-img="https://static.tp-link.com/upload/image-line/Archer_C24-01_large_20210909104432u.jpg" data-cash="298013" data-p3="109272" data-p6="57119" data-p12="32285">Buyurtma berish</button>
+      <button class="btn" data-rt="TP-Link Archer C24" data-cash="298013" data-p3="109272" data-p6="57119" data-p12="32285">Buyurtma berish</button>
     </div>
 
+    <!-- Archer C64 -->
     <div class="rt-card" data-cat="middle">
-      <div class="rt-img">
-        <img src="https://static.tp-link.com/upload/image-line/Archer_C64-01_large_20210909105719s.jpg" alt="Archer C64" onerror="this.style.display='none'">
-        <span class="fb">📶</span>
-      </div>
+      <div class="rt-img"><svg viewBox="0 0 200 120" xmlns="http://www.w3.org/2000/svg"><line x1="65" y1="25" x2="60" y2="70" stroke="#3b9eff" stroke-width="2.5" stroke-linecap="round"/><line x1="88" y1="25" x2="85" y2="70" stroke="#3b9eff" stroke-width="2.5" stroke-linecap="round"/><line x1="112" y1="25" x2="115" y2="70" stroke="#3b9eff" stroke-width="2.5" stroke-linecap="round"/><line x1="135" y1="25" x2="140" y2="70" stroke="#3b9eff" stroke-width="2.5" stroke-linecap="round"/><rect x="50" y="65" width="100" height="42" rx="8" fill="#1e2a45" stroke="#3b9eff" stroke-width="1.5"/><rect x="60" y="75" width="80" height="6" rx="2" fill="#3b9eff" opacity="0.3"/><circle cx="70" cy="92" r="3" fill="#34d399"/><circle cx="82" cy="92" r="3" fill="#3b9eff"/><circle cx="94" cy="92" r="3" fill="#3b9eff"/><circle cx="106" cy="92" r="3" fill="#6b7288"/><circle cx="118" cy="92" r="3" fill="#6b7288"/></svg></div>
       <div class="rt-body">
         <div class="rt-name">TP-Link Archer C64</div>
         <div class="rt-cat">Wi-Fi 5 · AC1200</div>
@@ -468,14 +456,12 @@ footer .copy{color:var(--mut);font-size:.78rem}
           </div>
         </div>
       </div>
-      <button class="btn" data-rt="TP-Link Archer C64" data-img="https://static.tp-link.com/upload/image-line/Archer_C64-01_large_20210909105719s.jpg" data-cash="352560" data-p3="129272" data-p6="67574" data-p12="38194">Buyurtma berish</button>
+      <button class="btn" data-rt="TP-Link Archer C64" data-cash="352560" data-p3="129272" data-p6="67574" data-p12="38194">Buyurtma berish</button>
     </div>
 
+    <!-- XC220-G3 -->
     <div class="rt-card" data-cat="middle">
-      <div class="rt-img">
-        <img src="https://static.tp-link.com/upload/image-line/XC220-G3%28UN%29_01_large_20210602042237v.jpg" alt="XC220-G3" onerror="this.style.display='none'">
-        <span class="fb">📶</span>
-      </div>
+      <div class="rt-img"><svg viewBox="0 0 200 120" xmlns="http://www.w3.org/2000/svg"><line x1="70" y1="28" x2="62" y2="70" stroke="#3b9eff" stroke-width="2.5" stroke-linecap="round"/><line x1="100" y1="25" x2="100" y2="70" stroke="#3b9eff" stroke-width="2.5" stroke-linecap="round"/><line x1="130" y1="28" x2="138" y2="70" stroke="#3b9eff" stroke-width="2.5" stroke-linecap="round"/><rect x="52" y="65" width="96" height="42" rx="8" fill="#1e2a45" stroke="#3b9eff" stroke-width="1.5"/><rect x="62" y="75" width="76" height="6" rx="2" fill="#3b9eff" opacity="0.3"/><circle cx="72" cy="92" r="3" fill="#34d399"/><circle cx="84" cy="92" r="3" fill="#3b9eff"/><circle cx="96" cy="92" r="3" fill="#3b9eff"/><circle cx="108" cy="92" r="3" fill="#6b7288"/><circle cx="120" cy="92" r="3" fill="#6b7288"/></svg></div>
       <div class="rt-body">
         <div class="rt-name">TP-Link XC220-G3</div>
         <div class="rt-cat">Wi-Fi 5 · AC1200</div>
@@ -492,14 +478,12 @@ footer .copy{color:var(--mut);font-size:.78rem}
           </div>
         </div>
       </div>
-      <button class="btn" data-rt="TP-Link XC220-G3" data-img="https://static.tp-link.com/upload/image-line/XC220-G3%28UN%29_01_large_20210602042237v.jpg" data-cash="379759" data-p3="139245" data-p6="72787" data-p12="41141">Buyurtma berish</button>
+      <button class="btn" data-rt="TP-Link XC220-G3" data-cash="379759" data-p3="139245" data-p6="72787" data-p12="41141">Buyurtma berish</button>
     </div>
 
+    <!-- Archer AX53 -->
     <div class="rt-card" data-cat="premium">
-      <div class="rt-img">
-        <img src="https://static.tp-link.com/upload/image-line/Archer_AX53-01_large_20210908092121f.jpg" alt="Archer AX53" onerror="this.style.display='none'">
-        <span class="fb">🚀</span>
-      </div>
+      <div class="rt-img"><svg viewBox="0 0 200 120" xmlns="http://www.w3.org/2000/svg"><line x1="60" y1="25" x2="60" y2="70" stroke="#3b9eff" stroke-width="2.5" stroke-linecap="round"/><line x1="85" y1="22" x2="85" y2="70" stroke="#3b9eff" stroke-width="2.5" stroke-linecap="round"/><line x1="115" y1="22" x2="115" y2="70" stroke="#3b9eff" stroke-width="2.5" stroke-linecap="round"/><line x1="140" y1="25" x2="140" y2="70" stroke="#3b9eff" stroke-width="2.5" stroke-linecap="round"/><rect x="45" y="65" width="110" height="45" rx="10" fill="#1e2a45" stroke="#3b9eff" stroke-width="1.5"/><path d="M60 78 L80 78 L85 74 L100 78 L105 74 L120 78 L140 78" stroke="#3b9eff" stroke-width="1" fill="none" opacity="0.5"/><circle cx="60" cy="95" r="3" fill="#34d399"/><circle cx="73" cy="95" r="3" fill="#3b9eff"/><circle cx="86" cy="95" r="3" fill="#3b9eff"/><circle cx="99" cy="95" r="3" fill="#6b7288"/><circle cx="112" cy="95" r="3" fill="#6b7288"/><circle cx="125" cy="95" r="3" fill="#6b7288"/></svg></div>
       <div class="rt-body">
         <div class="rt-name">TP-Link Archer AX53</div>
         <div class="rt-cat">Wi-Fi 6 · AX3000</div>
@@ -517,14 +501,12 @@ footer .copy{color:var(--mut);font-size:.78rem}
           </div>
         </div>
       </div>
-      <button class="btn" data-rt="TP-Link Archer AX53" data-img="https://static.tp-link.com/upload/image-line/Archer_AX53-01_large_20210908092121f.jpg" data-cash="463330" data-p3="169888" data-p6="88805" data-p12="50194">Buyurtma berish</button>
+      <button class="btn" data-rt="TP-Link Archer AX53" data-cash="463330" data-p3="169888" data-p6="88805" data-p12="50194">Buyurtma berish</button>
     </div>
 
+    <!-- Deco X10 -->
     <div class="rt-card" data-cat="premium">
-      <div class="rt-img">
-        <img src="https://static.tp-link.com/upload/image-line/Deco_X10-01_large_20210907101702c.jpg" alt="Deco X10" onerror="this.style.display='none'">
-        <span class="fb">🌐</span>
-      </div>
+      <div class="rt-img"><svg viewBox="0 0 200 120" xmlns="http://www.w3.org/2000/svg"><rect x="55" y="35" width="40" height="60" rx="10" fill="#1e2a45" stroke="#3b9eff" stroke-width="1.5"/><rect x="105" y="35" width="40" height="60" rx="10" fill="#1e2a45" stroke="#3b9eff" stroke-width="1.5"/><circle cx="75" cy="65" r="4" fill="#3b9eff"/><circle cx="75" cy="82" r="3" fill="#34d399"/><circle cx="125" cy="65" r="4" fill="#3b9eff"/><circle cx="125" cy="82" r="3" fill="#34d399"/><path d="M95 60 Q100 50 105 60" stroke="#3b9eff" stroke-width="1.5" fill="none" opacity="0.6"/><path d="M92 65 Q100 48 108 65" stroke="#3b9eff" stroke-width="1" fill="none" opacity="0.3"/></svg></div>
       <div class="rt-body">
         <div class="rt-name">Deco X10 AX1500</div>
         <div class="rt-cat">Mesh Wi-Fi 6 · 2 pack</div>
@@ -542,15 +524,13 @@ footer .copy{color:var(--mut);font-size:.78rem}
           </div>
         </div>
       </div>
-      <button class="btn" data-rt="Deco X10 AX1500" data-img="https://static.tp-link.com/upload/image-line/Deco_X10-01_large_20210907101702c.jpg" data-cash="752913" data-p3="276068" data-p6="144308" data-p12="81566">Buyurtma berish</button>
+      <button class="btn" data-rt="Deco X10 AX1500" data-cash="752913" data-p3="276068" data-p6="144308" data-p12="81566">Buyurtma berish</button>
     </div>
 
+    <!-- Deco X20 -->
     <div class="rt-card" data-cat="premium">
       <div class="rt-badge prem">Premium</div>
-      <div class="rt-img">
-        <img src="https://static.tp-link.com/upload/image-line/Deco_X20-01_large_20210908033907a.jpg" alt="Deco X20" onerror="this.style.display='none'">
-        <span class="fb">👑</span>
-      </div>
+      <div class="rt-img"><svg viewBox="0 0 200 120" xmlns="http://www.w3.org/2000/svg"><rect x="50" y="30" width="42" height="65" rx="12" fill="#1e2a45" stroke="#f5b544" stroke-width="1.5"/><rect x="108" y="30" width="42" height="65" rx="12" fill="#1e2a45" stroke="#f5b544" stroke-width="1.5"/><circle cx="71" cy="60" r="4.5" fill="#f5b544"/><circle cx="71" cy="78" r="3" fill="#34d399"/><circle cx="129" cy="60" r="4.5" fill="#f5b544"/><circle cx="129" cy="78" r="3" fill="#34d399"/><path d="M92 55 Q100 42 108 55" stroke="#f5b544" stroke-width="1.5" fill="none" opacity="0.7"/><path d="M88 62 Q100 38 112 62" stroke="#f5b544" stroke-width="1" fill="none" opacity="0.4"/><text x="100" y="20" text-anchor="middle" fill="#f5b544" font-size="8" font-weight="700" font-family="Inter">MESH</text></svg></div>
       <div class="rt-body">
         <div class="rt-name">Deco X20 AX1800</div>
         <div class="rt-cat">Mesh Wi-Fi 6 · 2 pack</div>
@@ -568,7 +548,7 @@ footer .copy{color:var(--mut);font-size:.78rem}
           </div>
         </div>
       </div>
-      <button class="btn" data-rt="Deco X20 AX1800" data-img="https://static.tp-link.com/upload/image-line/Deco_X20-01_large_20210908033907a.jpg" data-cash="992852" data-p3="364046" data-p6="190297" data-p12="107559">Buyurtma berish</button>
+      <button class="btn" data-rt="Deco X20 AX1800" data-cash="992852" data-p3="364046" data-p6="190297" data-p12="107559">Buyurtma berish</button>
     </div>
 
   </div>
@@ -579,13 +559,13 @@ footer .copy{color:var(--mut);font-size:.78rem}
   <div class="mod-box">
     <button class="mod-x" onclick="closeRt()">✕</button>
     <div class="mod-h">
-      <div class="mimg"><img id="mImg" src="" alt="" onerror="this.style.display='none'"><span class="fb">📶</span></div>
+      <div class="mimg" id="mImg"></div>
       <div class="mtag">Router tanlash</div>
       <h3 id="mName">Router</h3>
       <p>To'lov usulini tanlang</p>
     </div>
     <div class="pay-list" id="mPay">
-      <div class="pay" data-plan="cash"><div class="pl"><div class="pt">Naqd sotib olish</div><div class="pd">To'liq bir marta</div></div><div class="pr" id="mCash">— <small>so'm</small></div></div>
+      <div class="pay sel" data-plan="cash"><div class="pl"><div class="pt">Naqd sotib olish</div><div class="pd">To'liq bir marta</div></div><div class="pr" id="mCash">— <small>so'm</small></div></div>
       <div class="pay" data-plan="p3"><div class="pl"><div class="pt">Bo'lib to'lash · 3 oy</div><div class="pd">Har oy teng ulush</div></div><div class="pr" id="mP3">— <small>so'm/oy</small></div></div>
       <div class="pay" data-plan="p6"><div class="pl"><div class="pt">Bo'lib to'lash · 6 oy</div><div class="pd">Har oy teng ulush</div></div><div class="pr" id="mP6">— <small>so'm/oy</small></div></div>
       <div class="pay" data-plan="p12"><div class="pl"><div class="pt">Bo'lib to'lash · 12 oy</div><div class="pd">Eng qulay variant</div></div><div class="pr" id="mP12">— <small>so'm/oy</small></div></div>
@@ -668,6 +648,7 @@ footer .copy{color:var(--mut);font-size:.78rem}
 const TG_TOKEN='8892520457:AAHx8cszd0cEezw4ZGRZl19ruyvgcGr2AW4';
 const TG_CHAT='1166660946';
 
+// Тариф → форма
 document.querySelectorAll('[data-tariff]').forEach(btn=>{
   btn.addEventListener('click',()=>{
     const v=btn.getAttribute('data-tariff');
@@ -676,6 +657,7 @@ document.querySelectorAll('[data-tariff]').forEach(btn=>{
   });
 });
 
+// Отправка формы
 document.getElementById('leadForm').addEventListener('submit',async function(e){
   e.preventDefault();
   const btn=document.getElementById('submitBtn');
@@ -688,7 +670,7 @@ document.getElementById('leadForm').addEventListener('submit',async function(e){
     flat:f.flat.value.trim(),tariff:f.tariff.value||'Tanlanmagan'
   };
   if(!d.name||!d.phone||!d.district||!d.street||!d.house||!d.flat){
-    st.className='fstat err';st.textContent='Iltimos, barcha majburiy maydonlarni to\'ldiring';return;
+    st.className='fstat err';st.textContent='Barcha majburiy maydonlarni to\'ldiring';return;
   }
   const text='🔔 YANGI ARIZA!\n━━━━━━━━━━━━━━━━━━\n👤 Ism: '+d.name+'\n📞 Tel: '+d.phone+'\n📱 Qo\'shimcha: '+d.phone2+'\n━━━━━━━━━━━━━━━━━━\n📍 Tuman: '+d.district+'\n🏠 Ko\'cha: '+d.street+'\n🚪 Uy: '+d.house+', Kv: '+d.flat+'\n━━━━━━━━━━━━━━━━━━\n📦 Tanlov: '+d.tariff;
   btn.disabled=true;btn.textContent='Yuborilmoqda...';st.className='fstat';st.textContent='';
@@ -704,10 +686,12 @@ document.getElementById('leadForm').addEventListener('submit',async function(e){
   finally{btn.disabled=false;btn.textContent='Yuborish';}
 });
 
+// Кнопка наверх
 const toTop=document.getElementById('toTop');
 window.addEventListener('scroll',()=>{toTop.classList.toggle('on',window.scrollY>400);});
 toTop.addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));
 
+// Фильтр роутеров
 document.querySelectorAll('.rt-fbtn').forEach(btn=>{
   btn.addEventListener('click',()=>{
     document.querySelectorAll('.rt-fbtn').forEach(b=>b.classList.remove('on'));
@@ -719,15 +703,18 @@ document.querySelectorAll('.rt-fbtn').forEach(btn=>{
   });
 });
 
+// Модалка роутеров
 let curRt={};
 function fmt(n){return Number(n).toLocaleString('ru-RU');}
+
 document.querySelectorAll('[data-rt]').forEach(btn=>{
   btn.addEventListener('click',()=>{
+    const card=btn.closest('.rt-card');
+    const svg=card.querySelector('.rt-img svg').outerHTML;
     const d=btn.dataset;
     curRt={name:d.rt,cash:d.cash,p3:d.p3,p6:d.p6,p12:d.p12};
     document.getElementById('mName').textContent=d.rt;
-    const im=document.getElementById('mImg');
-    im.src=d.img||'';im.style.display=d.img?'block':'none';
+    document.getElementById('mImg').innerHTML=svg;
     document.getElementById('mCash').innerHTML=fmt(d.cash)+' <small>so\'m</small>';
     document.getElementById('mP3').innerHTML=fmt(d.p3)+' <small>so\'m/oy</small>';
     document.getElementById('mP6').innerHTML=fmt(d.p6)+' <small>so\'m/oy</small>';
@@ -738,6 +725,7 @@ document.querySelectorAll('[data-rt]').forEach(btn=>{
     document.body.style.overflow='hidden';
   });
 });
+
 function closeRt(){
   document.getElementById('rtModal').classList.remove('show');
   document.body.style.overflow='';
