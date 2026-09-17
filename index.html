@@ -3,14 +3,13 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Turon Telecom — Cheksiz internet</title>
-<meta name="description" content="Turon Telecom — tez internet. Routerlar naqd yoki bo'lib to'lash.">
+<title>Turon Telecom</title>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 :root{--bg:#08090f;--card:#10131e;--card2:#141828;--line:rgba(255,255,255,.06);--line2:rgba(255,255,255,.1);--acc:#3b9eff;--accS:rgba(59,158,255,.12);--accG:rgba(59,158,255,.25);--txt:#f5f7fb;--soft:#b8bfd0;--mut:#6b7288;--grn:#34d399;--gld:#f5b544;--red:#f87171}
 html{scroll-behavior:smooth}
-body{background:var(--bg);color:var(--txt);font-family:'Inter',sans-serif;line-height:1.55;-webkit-font-smoothing:antialiased;letter-spacing:-.01em;overflow-x:hidden}
+body{background:var(--bg);color:var(--txt);font-family:'Inter',sans-serif;line-height:1.55;-webkit-font-smoothing:antialiased;overflow-x:hidden}
 body::before{content:"";position:fixed;top:-30vh;left:50%;transform:translateX(-50%);width:1200px;height:800px;background:radial-gradient(ellipse,rgba(59,158,255,.08),transparent 60%);pointer-events:none;z-index:0}
 nav{position:sticky;top:0;z-index:100;background:rgba(8,9,15,.75);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid var(--line);padding:14px 24px}
 .nav-in{max-width:1200px;margin:0 auto;display:flex;justify-content:space-between;align-items:center}
@@ -38,8 +37,7 @@ nav{position:sticky;top:0;z-index:100;background:rgba(8,9,15,.75);backdrop-filte
 .btn-ghost:hover{background:rgba(255,255,255,.08);box-shadow:none}
 .feat-s{padding:60px 24px;max-width:1200px;margin:0 auto;position:relative;z-index:1}
 .feat-g{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px}
-.feat{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:24px 22px;transition:.3s}
-.feat:hover{border-color:var(--line2);background:var(--card2)}
+.feat{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:24px 22px}
 .feat .ic{width:40px;height:40px;border-radius:10px;background:var(--accS);display:flex;align-items:center;justify-content:center;font-size:1.15rem;margin-bottom:16px}
 .feat h4{font-size:.98rem;font-weight:700;margin-bottom:6px}
 .feat p{font-size:.86rem;color:var(--mut)}
@@ -53,17 +51,17 @@ nav{position:sticky;top:0;z-index:100;background:rgba(8,9,15,.75);backdrop-filte
 .card:hover{transform:translateY(-4px);border-color:var(--line2);background:var(--card2)}
 .card.f2{border-color:rgba(59,158,255,.35);background:linear-gradient(180deg,rgba(59,158,255,.05),var(--card) 40%);box-shadow:0 0 0 1px rgba(59,158,255,.1),0 20px 50px rgba(59,158,255,.08)}
 .tag{position:absolute;top:-11px;left:50%;transform:translateX(-50%);padding:5px 14px;border-radius:100px;font-size:.68rem;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;white-space:nowrap}
-.tag-hot{background:var(--acc);color:#fff;box-shadow:0 4px 16px var(--accG)}
+.tag-hot{background:var(--acc);color:#fff}
 .tag-top{background:var(--gld);color:#1a1a1a}
 .card-h{display:flex;align-items:center;justify-content:space-between;margin-bottom:6px}
-.card h3{font-size:1.28rem;font-weight:800;letter-spacing:-.02em}
+.card h3{font-size:1.28rem;font-weight:800}
 .tier{font-size:.68rem;font-weight:700;padding:3px 9px;border-radius:6px;background:rgba(255,255,255,.05);color:var(--mut);letter-spacing:1px;text-transform:uppercase}
 .card.f2 .tier{background:rgba(59,158,255,.15);color:var(--acc)}
 .card .sub{font-size:.84rem;color:var(--mut);margin-bottom:24px}
 .sp-row{display:flex;gap:10px;margin-bottom:22px}
 .sp-b{flex:1;background:rgba(255,255,255,.03);border:1px solid var(--line);border-radius:12px;padding:14px 12px;text-align:center}
 .sp-b .t{font-size:.68rem;color:var(--mut);margin-bottom:5px;font-weight:500}
-.sp-b .v{font-size:1.05rem;font-weight:800;letter-spacing:-.02em}
+.sp-b .v{font-size:1.05rem;font-weight:800}
 .sp-b .v small{font-size:.7rem;color:var(--mut);font-weight:500;margin-left:2px}
 .f-list{list-style:none;margin-bottom:24px;flex-grow:1}
 .f-list li{display:flex;align-items:center;gap:11px;padding:10px 0;font-size:.88rem;color:var(--soft);border-bottom:1px solid var(--line)}
@@ -72,7 +70,7 @@ nav{position:sticky;top:0;z-index:100;background:rgba(8,9,15,.75);backdrop-filte
 .f-list strong{color:var(--txt);font-weight:600}
 .f-list .free{color:var(--grn);font-weight:700}
 .p-row{padding-top:20px;border-top:1px solid var(--line);margin-bottom:18px;text-align:center}
-.p-row .amt{font-size:1.9rem;font-weight:800;letter-spacing:-.03em}
+.p-row .amt{font-size:1.9rem;font-weight:800}
 .p-row .per{font-size:.82rem;color:var(--mut);display:block;margin-top:3px}
 .card .btn{width:100%}
 .form-sect{padding:80px 24px;position:relative;z-index:1}
@@ -80,7 +78,7 @@ nav{position:sticky;top:0;z-index:100;background:rgba(8,9,15,.75);backdrop-filte
 .form-in::before{content:"";position:absolute;top:-50%;left:50%;transform:translateX(-50%);width:400px;height:400px;background:radial-gradient(circle,rgba(59,158,255,.12),transparent 70%);pointer-events:none}
 .form-in>*{position:relative}
 .form-h{text-align:center;margin-bottom:32px}
-.form-h h2{font-size:clamp(1.5rem,3.5vw,2rem);font-weight:800;margin-bottom:10px;letter-spacing:-.02em}
+.form-h h2{font-size:clamp(1.5rem,3.5vw,2rem);font-weight:800;margin-bottom:10px}
 .form-h p{color:var(--soft);font-size:.95rem}
 .form-f{display:flex;flex-direction:column;gap:14px}
 .fg{display:flex;flex-direction:column;gap:6px}
@@ -88,8 +86,8 @@ nav{position:sticky;top:0;z-index:100;background:rgba(8,9,15,.75);backdrop-filte
 .fg label .rq{color:var(--acc)}
 .frow{display:grid;grid-template-columns:1fr 1fr;gap:14px}
 @media(max-width:500px){.frow{grid-template-columns:1fr}.form-in{padding:32px 22px}}
-.form-f input,.form-f select{padding:14px 18px;border-radius:12px;border:1px solid var(--line);background:rgba(0,0,0,.25);color:var(--txt);font-size:.95rem;outline:none;transition:.2s;font-family:inherit;width:100%}
-.form-f input:focus,.form-f select:focus{border-color:var(--acc);background:rgba(0,0,0,.4);box-shadow:0 0 0 3px rgba(59,158,255,.1)}
+.form-f input,.form-f select{padding:14px 18px;border-radius:12px;border:1px solid var(--line);background:rgba(0,0,0,.25);color:var(--txt);font-size:.95rem;outline:none;font-family:inherit;width:100%}
+.form-f input:focus,.form-f select:focus{border-color:var(--acc);box-shadow:0 0 0 3px rgba(59,158,255,.1)}
 .form-f input::placeholder{color:#4a5268}
 .form-f select{appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath fill='%236b7288' d='M6 8L0 0h12z'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 18px center;padding-right:44px}
 .form-f .btn{margin-top:10px;padding:16px;font-size:1rem;width:100%}
@@ -99,14 +97,11 @@ nav{position:sticky;top:0;z-index:100;background:rgba(8,9,15,.75);backdrop-filte
 footer{padding:40px 24px 30px;text-align:center;border-top:1px solid var(--line);position:relative;z-index:1}
 footer .brand{justify-content:center;display:inline-flex;margin-bottom:18px}
 footer .links{display:flex;gap:20px;justify-content:center;flex-wrap:wrap;margin-bottom:20px}
-footer .links a{color:var(--soft);text-decoration:none;font-size:.88rem;font-weight:500;transition:.2s}
+footer .links a{color:var(--soft);text-decoration:none;font-size:.88rem;font-weight:500}
 footer .links a:hover{color:var(--acc)}
 footer .copy{color:var(--mut);font-size:.78rem}
-.fade{opacity:0;transform:translateY(20px);animation:fdIn2 .7s forwards}
-@keyframes fdIn2{to{opacity:1;transform:translateY(0)}}
 .to-top{position:fixed;bottom:24px;right:24px;width:48px;height:48px;border-radius:50%;background:var(--acc);color:#fff;border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:1.2rem;box-shadow:0 6px 24px var(--accG);opacity:0;pointer-events:none;transition:.3s;z-index:50}
 .to-top.on{opacity:1;pointer-events:auto}
-.to-top:hover{transform:translateY(-3px)}
 </style>
 </head>
 <body>
@@ -125,10 +120,10 @@ footer .copy{color:var(--mut);font-size:.78rem}
 
 <section class="hero">
   <div class="hero-in">
-    <div class="pill fade"><span class="dot"></span> Yangi tariflar mavjud</div>
-    <h1 class="fade">Katta ma'lumotlar uchun<br><em>cheksiz internet</em></h1>
-    <p class="fade">Turon Telecom — tez, barqaror va cheksiz internet.</p>
-    <div class="hero-cta fade">
+    <div class="pill"><span class="dot"></span> Yangi tariflar mavjud</div>
+    <h1>Katta ma'lumotlar uchun<br><em>cheksiz internet</em></h1>
+    <p>Turon Telecom — tez, barqaror va cheksiz internet.</p>
+    <div class="hero-cta">
       <a href="#ariza" class="btn">Ariza qoldirish</a>
       <a href="#premier" class="btn btn-ghost">Tariflarni ko'rish</a>
     </div>
@@ -137,28 +132,28 @@ footer .copy{color:var(--mut);font-size:.78rem}
 
 <section class="feat-s">
   <div class="feat-g">
-    <div class="feat"><div class="ic">⚡</div><h4>Yuqori tezlik</h4><p>1000 Mbit/s gacha — o'yin va ish uchun.</p></div>
-    <div class="feat"><div class="ic">📺</div><h4>Cinemara TV</h4><p>200+ kanal barcha tariflarga kiritilgan.</p></div>
-    <div class="feat"><div class="ic">📶</div><h4>Wi-Fi Router</h4><p>Naqd yoki bo'lib to'lash — qulay.</p></div>
-    <div class="feat"><div class="ic">🛠</div><h4>24/7 yordam</h4><p>Har qanday savol bo'yicha murojaat qiling.</p></div>
+    <div class="feat"><div class="ic">⚡</div><h4>Yuqori tezlik</h4><p>1000 Mbit/s gacha.</p></div>
+    <div class="feat"><div class="ic">📺</div><h4>Cinemara TV</h4><p>200+ kanal kiritilgan.</p></div>
+    <div class="feat"><div class="ic">📶</div><h4>Wi-Fi Router</h4><p>Naqd yoki bo'lib to'lash.</p></div>
+    <div class="feat"><div class="ic">🛠</div><h4>24/7 yordam</h4><p>Har qanday savolga javob.</p></div>
   </div>
 </section>
 
 <section class="sect" id="premier">
-  <div class="sect-head"><span class="eb">Premier</span><h2>Uy va ofis uchun</h2><p>Barqaror internet, hamyonbop narxlar</p></div>
+  <div class="sect-head"><span class="eb">Premier</span><h2>Uy va ofis uchun</h2><p>Barqaror internet</p></div>
   <div class="grid">
     <div class="card">
       <div class="card-h"><h3>Premier 80</h3><span class="tier">Start</span></div>
-      <div class="sub">Cheksiz internet tarifi</div>
+      <div class="sub">Cheksiz internet</div>
       <div class="sp-row"><div class="sp-b"><div class="t">16:00–00:00</div><div class="v">80 <small>Mbit/s</small></div></div><div class="sp-b"><div class="t">00:00–16:00</div><div class="v">200 <small>Mbit/s</small></div></div></div>
-      <ul class="f-list"><li><span class="ic">🎬</span>Cinemara <strong>Standart</strong> — 145+ kanal</li><li><span class="ic">📶</span>Wi-Fi Router — Pullik ijara</li></ul>
+      <ul class="f-list"><li><span class="ic">🎬</span>Cinemara <strong>Standart</strong> — 145+</li><li><span class="ic">📶</span>Wi-Fi Router — Pullik ijara</li></ul>
       <div class="p-row"><div class="amt">165 000</div><span class="per">so'm / oyiga</span></div>
       <a href="#ariza" class="btn" data-tariff="Premier 80">Ulanish</a>
     </div>
     <div class="card f2">
       <div class="tag tag-hot">Yangi</div>
       <div class="card-h"><h3>Premier Plus</h3><span class="tier">Best</span></div>
-      <div class="sub">Cheksiz internet tarifi</div>
+      <div class="sub">Cheksiz internet</div>
       <div class="sp-row"><div class="sp-b"><div class="t">16:00–00:00</div><div class="v">100 <small>Mbit/s</small></div></div><div class="sp-b"><div class="t">00:00–16:00</div><div class="v">100 <small>Mbit/s</small></div></div></div>
       <ul class="f-list"><li><span class="ic">📶</span>Wi-Fi Router — <strong class="free">Bepul</strong></li><li><span class="ic">🎬</span>Cinemara — <strong>200+ kanal</strong></li><li><span class="ic">🎁</span>Ulanish — <strong class="free">Bepul</strong></li></ul>
       <div class="p-row"><div class="amt">175 000</div><span class="per">so'm / oyiga</span></div>
@@ -166,9 +161,9 @@ footer .copy{color:var(--mut);font-size:.78rem}
     </div>
     <div class="card">
       <div class="card-h"><h3>Premier 100</h3><span class="tier">Plus</span></div>
-      <div class="sub">Cheksiz internet tarifi</div>
+      <div class="sub">Cheksiz internet</div>
       <div class="sp-row"><div class="sp-b"><div class="t">16:00–00:00</div><div class="v">100 <small>Mbit/s</small></div></div><div class="sp-b"><div class="t">00:00–16:00</div><div class="v">200 <small>Mbit/s</small></div></div></div>
-      <ul class="f-list"><li><span class="ic">🎬</span>Cinemara <strong>Standart</strong> — 145+ kanal</li><li><span class="ic">📶</span>Wi-Fi Router — Pullik ijara</li></ul>
+      <ul class="f-list"><li><span class="ic">🎬</span>Cinemara <strong>Standart</strong> — 145+</li><li><span class="ic">📶</span>Wi-Fi Router — Pullik ijara</li></ul>
       <div class="p-row"><div class="amt">185 000</div><span class="per">so'm / oyiga</span></div>
       <a href="#ariza" class="btn" data-tariff="Premier 100">Ulanish</a>
     </div>
@@ -180,7 +175,7 @@ footer .copy{color:var(--mut);font-size:.78rem}
   <div class="grid">
     <div class="card">
       <div class="card-h"><h3>Ultima 200</h3><span class="tier">Fast</span></div>
-      <div class="sub">Cheksiz internet tarifi</div>
+      <div class="sub">Cheksiz internet</div>
       <div class="sp-row"><div class="sp-b"><div class="t">16:00–00:00</div><div class="v">200 <small>Mbit/s</small></div></div><div class="sp-b"><div class="t">00:00–16:00</div><div class="v">150 <small>Mbit/s</small></div></div></div>
       <ul class="f-list"><li><span class="ic">🎬</span>Cinemara <strong>Premium</strong></li><li><span class="ic">📶</span>Wi-Fi Router — Pullik ijara</li></ul>
       <div class="p-row"><div class="amt">270 000</div><span class="per">so'm / oyiga</span></div>
@@ -188,7 +183,7 @@ footer .copy{color:var(--mut);font-size:.78rem}
     </div>
     <div class="card">
       <div class="card-h"><h3>Ultima 300</h3><span class="tier">Fast+</span></div>
-      <div class="sub">Cheksiz internet tarifi</div>
+      <div class="sub">Cheksiz internet</div>
       <div class="sp-row"><div class="sp-b"><div class="t">16:00–00:00</div><div class="v">300 <small>Mbit/s</small></div></div><div class="sp-b"><div class="t">00:00–16:00</div><div class="v">300 <small>Mbit/s</small></div></div></div>
       <ul class="f-list"><li><span class="ic">🎬</span>Cinemara <strong>Premium</strong></li><li><span class="ic">📶</span>Wi-Fi Router — Pullik ijara</li></ul>
       <div class="p-row"><div class="amt">370 000</div><span class="per">so'm / oyiga</span></div>
@@ -196,7 +191,7 @@ footer .copy{color:var(--mut);font-size:.78rem}
     </div>
     <div class="card">
       <div class="card-h"><h3>Ultima 500</h3><span class="tier">Pro</span></div>
-      <div class="sub">Cheksiz internet tarifi</div>
+      <div class="sub">Cheksiz internet</div>
       <div class="sp-row"><div class="sp-b"><div class="t">16:00–00:00</div><div class="v">500 <small>Mbit/s</small></div></div><div class="sp-b"><div class="t">00:00–16:00</div><div class="v">500 <small>Mbit/s</small></div></div></div>
       <ul class="f-list"><li><span class="ic">🎬</span>Cinemara <strong>Premium</strong></li><li><span class="ic">📶</span>Wi-Fi Router — Pullik ijara</li></ul>
       <div class="p-row"><div class="amt">500 000</div><span class="per">so'm / oyiga</span></div>
@@ -205,7 +200,7 @@ footer .copy{color:var(--mut);font-size:.78rem}
     <div class="card">
       <div class="tag tag-top">Tezkor</div>
       <div class="card-h"><h3>Ultima 1000</h3><span class="tier">Max</span></div>
-      <div class="sub">Cheksiz internet tarifi</div>
+      <div class="sub">Cheksiz internet</div>
       <div class="sp-row"><div class="sp-b"><div class="t">16:00–00:00</div><div class="v">1000 <small>Mbit/s</small></div></div><div class="sp-b"><div class="t">00:00–16:00</div><div class="v">1000 <small>Mbit/s</small></div></div></div>
       <ul class="f-list"><li><span class="ic">🎬</span>Cinemara <strong>Premium</strong></li><li><span class="ic">📶</span>Wi-Fi Router — Pullik ijara</li></ul>
       <div class="p-row"><div class="amt">1 000 000</div><span class="per">so'm / oyiga</span></div>
@@ -218,14 +213,14 @@ footer .copy{color:var(--mut);font-size:.78rem}
   <div class="form-in">
     <div class="form-h">
       <h2>Ariza qoldiring</h2>
-      <p>Ma'lumotlaringizni to'ldiring — tez orada bog'lanamiz</p>
+      <p>Ma'lumotlaringizni to'ldiring</p>
     </div>
     <form class="form-f" id="leadForm">
       <div class="fg"><label>Ismingiz <span class="rq">*</span></label><input type="text" name="name" placeholder="Ism va familiya" required></div>
-      <div class="fg"><label>Telefon raqamingiz <span class="rq">*</span></label><input type="tel" name="phone" placeholder="+998 __ ___ __ __" required></div>
-      <div class="fg"><label>Qo'shimcha raqam</label><input type="tel" name="phone2" placeholder="+998 __ ___ __ __ (majburiy emas)"></div>
-      <div class="fg"><label>Tuman / Shahar <span class="rq">*</span></label><input type="text" name="district" placeholder="Masalan: Chilonzor" required></div>
-      <div class="fg"><label>Ko'cha <span class="rq">*</span></label><input type="text" name="street" placeholder="Masalan: Bunyodkor" required></div>
+      <div class="fg"><label>Telefon <span class="rq">*</span></label><input type="tel" name="phone" placeholder="+998 __ ___ __ __" required></div>
+      <div class="fg"><label>Qo'shimcha raqam</label><input type="tel" name="phone2" placeholder="+998 __ ___ __ __"></div>
+      <div class="fg"><label>Tuman <span class="rq">*</span></label><input type="text" name="district" placeholder="Chilonzor" required></div>
+      <div class="fg"><label>Ko'cha <span class="rq">*</span></label><input type="text" name="street" placeholder="Bunyodkor" required></div>
       <div class="frow">
         <div class="fg"><label>Uy <span class="rq">*</span></label><input type="text" name="house" placeholder="12" required></div>
         <div class="fg"><label>Kvartira <span class="rq">*</span></label><input type="text" name="flat" placeholder="45" required></div>
@@ -233,20 +228,20 @@ footer .copy{color:var(--mut);font-size:.78rem}
       <div class="fg">
         <label>Tarifni tanlang <span class="rq">*</span></label>
         <select name="tariff" id="tariffSelect" required>
-          <option value="">— Tarifni tanlang —</option>
-          <option value="Premier 80" data-router="paid">Premier 80 — 165 000 so'm</option>
-          <option value="Premier Plus" data-router="free">Premier Plus — 175 000 so'm ★ Bepul router</option>
-          <option value="Premier 100" data-router="paid">Premier 100 — 185 000 so'm</option>
-          <option value="Ultima 200" data-router="paid">Ultima 200 — 270 000 so'm</option>
-          <option value="Ultima 300" data-router="paid">Ultima 300 — 370 000 so'm</option>
-          <option value="Ultima 500" data-router="paid">Ultima 500 — 500 000 so'm</option>
-          <option value="Ultima 1000" data-router="paid">Ultima 1000 — 1 000 000 so'm</option>
+          <option value="">— Tarif —</option>
+          <option value="Premier 80" data-router="paid">Premier 80 — 165 000</option>
+          <option value="Premier Plus" data-router="free">Premier Plus — 175 000 ★ Bepul router</option>
+          <option value="Premier 100" data-router="paid">Premier 100 — 185 000</option>
+          <option value="Ultima 200" data-router="paid">Ultima 200 — 270 000</option>
+          <option value="Ultima 300" data-router="paid">Ultima 300 — 370 000</option>
+          <option value="Ultima 500" data-router="paid">Ultima 500 — 500 000</option>
+          <option value="Ultima 1000" data-router="paid">Ultima 1000 — 1 000 000</option>
         </select>
       </div>
       <div class="fg">
         <label>Router <span class="rq">*</span></label>
         <select name="router" id="routerSelect" required>
-          <option value="">— Avval tarifni tanlang —</option>
+          <option value="">— Avval tarif —</option>
         </select>
         <div id="routerHint" style="font-size:.78rem;color:var(--mut);margin-left:4px;margin-top:4px"></div>
       </div>
@@ -264,81 +259,79 @@ footer .copy{color:var(--mut);font-size:.78rem}
     <a href="https://t.me/baxtiyorv_b" target="_blank">Telegram</a>
     <a href="tel:+998930028847">+998 93 002 88 47</a>
   </div>
-  <div class="copy">© 2025 Turon Telecom. Barcha huquqlar himoyalangan.</div>
+  <div class="copy">© 2025 Turon Telecom.</div>
 </footer>
 
-<button class="to-top" id="toTop" aria-label="Yuqoriga">↑</button>
+<button class="to-top" id="toTop">↑</button>
 
 <script>
   const TG_TOKEN='8892520457:AAHx8cszd0cEezw4ZGRZl19ruyvgcGr2AW4';
 const TG_CHAT='1166660946';
 
 const ROUTERS=[
-  {name:'ONU',cash:'125 000',p3:'45 833',p6:'23 958',p12:'13 542'},
-  {name:'TP-Link XC220-G5',cash:'278 489',p3:'102 112',p6:'53 377',p12:'30 170'},
-  {name:'TP-Link Archer C6',cash:'289 582',p3:'106 180',p6:'55 503',p12:'31 371'},
-  {name:'TP-Link Archer C24',cash:'298 013',p3:'109 272',p6:'57 119',p12:'32 285'},
-  {name:'TP-Link Archer C64',cash:'352 560',p3:'129 272',p6:'67 574',p12:'38 194'},
-  {name:'TP-Link XC220-G3',cash:'379 759',p3:'139 245',p6:'72 787',p12:'41 141'},
-  {name:'TP-Link Archer AX53',cash:'463 330',p3:'169 888',p6:'88 805',p12:'50 194'},
-  {name:'Deco X10 AX1500',cash:'752 913',p3:'276 068',p6:'144 308',p12:'81 566'},
-  {name:'Deco X20 AX1800',cash:'992 852',p3:'364 046',p6:'190 297',p12:'107 559'}
+  {name:'ONU',cash:'125 000',p12:'13 542'},
+  {name:'TP-Link XC220-G5',cash:'278 489',p12:'30 170'},
+  {name:'TP-Link Archer C6',cash:'289 582',p12:'31 371'},
+  {name:'TP-Link Archer C24',cash:'298 013',p12:'32 285'},
+  {name:'TP-Link Archer C64',cash:'352 560',p12:'38 194'},
+  {name:'TP-Link XC220-G3',cash:'379 759',p12:'41 141'},
+  {name:'TP-Link Archer AX53',cash:'463 330',p12:'50 194'},
+  {name:'Deco X10 AX1500',cash:'752 913',p12:'81 566'},
+  {name:'Deco X20 AX1800',cash:'992 852',p12:'107 559'}
 ];
 
 const tSel=document.getElementById('tariffSelect');
 const rSel=document.getElementById('routerSelect');
 const rHint=document.getElementById('routerHint');
 
-document.querySelectorAll('[data-tariff]').forEach(function(b){
-  b.addEventListener('click',function(){
-    const v=b.getAttribute('data-tariff');
-    if(tSel){
-      for(let i=0;i<tSel.options.length;i++){
-        if(tSel.options[i].value===v){tSel.value=v;break;}
-      }
-      buildRouters();
-    }
-  });
-});
-
 function buildRouters(){
   if(!tSel||!rSel)return;
   const opt=tSel.options[tSel.selectedIndex];
   if(!opt||!opt.value){
-    rSel.innerHTML='<option value="">— Avval tarifni tanlang —</option>';
+    rSel.innerHTML='<option value="">— Avval tarif —</option>';
     if(rHint)rHint.textContent='';
     return;
   }
   const canFree=opt.dataset.router==='free';
   let html='<option value="">— Router tanlang —</option>';
   html+='<option value="Mening routerim bor (bepul)">📦 Mening routerim bor — bepul</option>';
-  if(canFree){html+='<option value="Bepul router (tarif bilan)">🎁 Bepul router — tarif bilan</option>';}
-  html+='<option value="__divider__" disabled>━━━ Sotib olish ━━━</option>';
+  if(canFree)html+='<option value="Bepul router (tarif bilan)">🎁 Bepul router — tarif bilan</option>';
+  html+='<option value="__d1" disabled>━━━ Sotib olish ━━━</option>';
   ROUTERS.forEach(function(r){
-    html+='<option value="Sotib olish: '+r.name+' (naqd '+r.cash+" so'm)\">💳 "+r.name+' — '+r.cash+" so'm</option>";
+    html+='<option value="Sotib olish: '+r.name+' ('+r.cash+" so'm)\">💳 "+r.name+' — '+r.cash+" so'm</option>";
   });
-  html+='<option value="__divider2__" disabled>━━━ Bo\'lib to\'lash ━━━</option>';
+  html+='<option value="__d2" disabled>━━━ 12 oy bo\'lib to\'lash ━━━</option>';
   ROUTERS.forEach(function(r){
-    html+='<option value="Bolib tolash: '+r.name+' (12 oy: '+r.p12+" so'm/oy)\">📅 "+r.name+' — 12 oy: '+r.p12+" so'm/oy</option>";
+    html+='<option value="12 oy: '+r.name+' ('+r.p12+" so'm/oy)\">📅 "+r.name+' — '+r.p12+" so'm/oy</option>";
   });
   rSel.innerHTML=html;
   if(rHint){
     if(canFree){rHint.innerHTML='💡 Bu tarifda <strong style="color:var(--grn)">bepul router</strong> mavjud';rHint.style.color='';}
-    else{rHint.innerHTML='💡 Bu tarifda bepul router yo\'q — sotib olish yoki bo\'lib to\'lashni tanlang';rHint.style.color='';}
+    else{rHint.innerHTML='💡 Bepul router yo\'q — sotib olish yoki bo\'lib to\'lash';rHint.style.color='';}
   }
 }
 
-if(tSel){tSel.addEventListener('change',buildRouters);}
+if(tSel){
+  tSel.addEventListener('change',buildRouters);
+  document.querySelectorAll('[data-tariff]').forEach(function(b){
+    b.addEventListener('click',function(){
+      const v=b.getAttribute('data-tariff');
+      for(let i=0;i<tSel.options.length;i++){
+        if(tSel.options[i].value===v){tSel.value=v;break;}
+      }
+      buildRouters();
+    });
+  });
+}
 
 if(rSel){
   rSel.addEventListener('change',function(){
-    const v=rSel.value;
-    if(v==='Bepul router (tarif bilan)'){
+    if(rSel.value==='Bepul router (tarif bilan)'){
       const opt=tSel.options[tSel.selectedIndex];
       if(opt.dataset.router!=='free'){
         rSel.value='';
         if(rHint){
-          rHint.innerHTML='⚠️ Bu tarifda bepul router mavjud emas! Faqat Premier Plus tarifida.';
+          rHint.innerHTML='⚠️ Bu tarifda bepul router yo\'q! Faqat Premier Plus.';
           rHint.style.color='var(--red)';
           setTimeout(function(){rHint.style.color='';buildRouters();},3000);
         }
